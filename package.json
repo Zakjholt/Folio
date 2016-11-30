@@ -2,7 +2,7 @@
   "name": "Folio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://zakjholt.github.io",
+  "homepage": "http://zakjholt.github.io/Folio",
   "devDependencies": {
     "gh-pages": "^0.12.0",
     "react-scripts": "0.7.0"

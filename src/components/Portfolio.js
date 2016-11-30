@@ -92,9 +92,11 @@ class Portfolio extends Component {
             <div className="Portfolio">
                 <div className="Section-Container">
                     <h4>Portfolio</h4>
-                    <div className='Portfolio-Control fa fa-4x fa-arrow-circle-left' aria-hidden='true' onClick={() => {
+                    <div className='Portfolio-Control' onClick={() => {
                         this.moveBack();
-                    }}></div>
+                    }}>
+                        <span className=' fa fa-arrow-circle-left' aria-hidden='true'></span>
+                    </div>
                     <div className="Portfolio-Item-Container">
                         <a target='_blank' href={selected.hostedUrl}><img className='Portfolio-Image' id={selected.id} src={selected.photo} alt={selected.name}/></a>
 
@@ -107,9 +109,12 @@ class Portfolio extends Component {
                             </p>
                         </div>
                     </div>
-                    <div className='Portfolio-Control fa fa-4x fa-arrow-circle-right' aria-hidden='true' onClick={() => {
+                    <div className='Portfolio-Control' onClick={() => {
                         this.moveForward();
-                    }}></div>
+                    }}>
+                        <span className=' fa fa-arrow-circle-right' aria-hidden='true'></span>
+                    </div>
+                    <div className="Portfolio-Item-Container"></div>
                 </div>
 
             </div>
