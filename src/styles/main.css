@@ -1,0 +1,182 @@
+/**********
+General
+**********/
+
+.Section-Container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background: rgba(80, 90, 100, .3);
+}
+
+.About, .Portfolio, .Contact {
+  font-family: 'Space Mono', monospace;
+}
+
+
+/**********
+Header
+**********/
+
+.Header{
+  background: darkslategrey;
+  margin: 0 auto;
+  font-family: 'Concert One', cursive;
+}
+
+.Header>.Section-Container {
+  background: darkslategrey;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+nav li:hover {
+  background: white;
+  color: darkslategrey;
+}
+
+/**********
+About
+**********/
+
+.About {
+  background: lightblue;
+  box-sizing: border-box;
+}
+
+.profile {
+  width: 20%;
+  max-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+  margin-right: 50px;
+  float: left;
+}
+
+.bio {
+  width: 70%;
+  display: inline-block;
+  float: left;
+
+}
+
+.row {
+  padding-top: 10px;
+  clear: both;
+}
+
+.About li {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  background: rgba(50, 20, 10, .5);
+}
+
+/**********
+Portfolio
+**********/
+
+.Portfolio {
+  background: darkseagreen;
+  user-select: none;
+}
+
+.Portfolio-Item-Container {
+  width: 80%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.Portfolio-Image {
+  width: 100%;
+}
+
+.Portfolio-Control {
+  width: 8%;
+  margin: 1%;
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.Portfolio-Control:hover {
+  background: white;
+  color: rgba(50,20,10,.5);
+  border-radius: 80%;
+}
+
+.Portfolio-Link {
+  margin: 0 5px;
+  color: darkred;
+}
+
+.Portfolio-Link:hover {
+  background: white;
+}
+
+
+
+/**********
+Contact
+**********/
+
+.Contact {
+  background: maroon;
+}
+
+.Contact a {
+  color: white;
+  padding: 10px;
+}
+
+.Contact a:hover {
+  color: maroon;
+}
+
+.Contact ul {
+  margin: 5px;
+}
+.Contact li {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  background: rgba(50, 20, 10, .5);
+  border-radius: 3%;
+}
+
+.Contact li:hover {
+  background: white;
+}
+
+
+/**********
+Mobile
+**********/
+
+@media screen and (max-width: 680px) {
+  .profile {
+    display: none;
+  }
+
+  nav li {
+    padding: 10px;
+  }
+
+  .bio {
+    width: 100%;
+  }
+}
