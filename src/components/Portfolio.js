@@ -41,7 +41,7 @@ class Portfolio extends Component {
                     name: 'Sportsball',
                     description: 'Sportsball is an app to help the not-so-sports-savvy person enjoy new sports. Users begin by choosing one of four sports (Football, Hockey, Basketball, and Baseball). They are then shown all games scheduled for the current date with current scores. Upon choosing a game to follow users can see the score, along with a newbie\'s guide to the sport.',
                     photo: SportsballPhoto,
-                    hostedUrl: 'http://sports-ball.herokuapp.com/',
+                    hostedUrl: 'https://zakjholt.github.io/Sports-Ball/',
                     codeUrl: 'https://github.com/Zakjholt/Sports-Ball',
                     tech: [
                         'HTML', 'CSS', 'React and Redux', 'AJAX', 'Webpack with Babel'
@@ -74,11 +74,11 @@ class Portfolio extends Component {
                 selectedItem: this.state.selectedItem - 1
             })
         } else {
-            this.setState({selectedItem: 3})
+            this.setState({selectedItem: this.state.portfolio.length - 1})
         }
     }
     moveForward() {
-        if (this.state.selectedItem !== 3) {
+        if (this.state.selectedItem !== this.state.portfolio.length  - 1) {
             this.setState({
                 selectedItem: this.state.selectedItem + 1
             })
