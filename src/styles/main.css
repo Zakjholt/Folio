@@ -1,7 +1,9 @@
 /**********
 General
 **********/
-
+body {
+  scroll-behavior: smooth;
+}
 .Section-Container {
     width: 80%;
     margin: 0 auto;

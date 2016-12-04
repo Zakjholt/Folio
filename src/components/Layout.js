@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import zenscroll from 'zenscroll';
 import About from './About';
 import Contact from './Contact';
 import Portfolio from './Portfolio'
@@ -7,7 +8,8 @@ import Portfolio from './Portfolio'
 class Layout extends Component {
     scrollToSpot(index) {
       var element = document.getElementsByClassName('Section-Container')[index]
-      element.scrollIntoView({block: 'end', behavior:'smooth'});
+      // element.scrollIntoView({block: 'end', behavior:'smooth'});
+      zenscroll.to(element);
     }
     render() {
         return (
