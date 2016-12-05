@@ -1,9 +1,11 @@
 /**********
 General
 **********/
+
 body {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 .Section-Container {
     width: 80%;
     margin: 0 auto;
@@ -14,7 +16,7 @@ body {
 }
 
 .About, .Portfolio, .Contact {
-  font-family: 'Space Mono', monospace;
+    font-family: 'Space Mono', monospace;
 }
 
 
@@ -22,14 +24,17 @@ body {
 Header
 **********/
 
-.Header{
-  background: darkslategrey;
-  margin: 0 auto;
-  font-family: 'Concert One', cursive;
+.Header {
+    background: darkslategrey;
+    margin: 0 auto;
+    font-family: 'Concert One', cursive;
+    position: fixed;
+    width: 100%;
+    margin-top: -10px;
 }
 
 .Header>.Section-Container {
-  background: darkslategrey;
+    background: darkslategrey;
 }
 
 nav ul {
@@ -47,94 +52,97 @@ nav li {
 }
 
 nav li:hover {
-  background: white;
-  color: darkslategrey;
+    background: white;
+    color: darkslategrey;
 }
+
 
 /**********
 About
 **********/
 
 .About {
-  background: lightblue;
-  box-sizing: border-box;
+    background: lightblue;
+    box-sizing: border-box;
+    padding-top: 170px;
 }
 
 .profile {
-  width: 20%;
-  max-width: 200px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-  margin-right: 50px;
-  float: left;
+    width: 20%;
+    max-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+    margin-right: 50px;
+    float: left;
 }
 
 .bio {
-  width: 70%;
-  display: inline-block;
-  float: left;
-
+    width: 70%;
+    display: inline-block;
+    float: left;
 }
 
 .row {
-  padding-top: 10px;
-  clear: both;
+    padding-top: 10px;
+    clear: both;
 }
+
 .About ul {
-  padding: 5px;
+    padding: 5px;
 }
+
 .About li {
-  display: inline-block;
-  margin: 5px;
-  padding: 5px;
-  background: rgba(50, 20, 10, .5);
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background: rgba(50, 20, 10, .5);
 }
+
 
 /**********
 Portfolio
 **********/
 
 .Portfolio {
-  background: darkseagreen;
-  user-select: none;
+    background: darkseagreen;
+    user-select: none;
 }
 
 .Portfolio-Item-Container {
-  width: 80%;
-  box-sizing: border-box;
-  display: inline-block;
+    width: 80%;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 .Portfolio-Image {
-  width: 100%;
+    width: 100%;
 }
 
 .Portfolio-Control {
-  width: 10%;
-  box-sizing: border-box;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 4em;
-  position: relative;
-  bottom: 300px;
+    width: 10%;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 4em;
+    position: relative;
+    bottom: 300px;
 }
 
 .Portfolio-Control:hover {
-  background: white;
-  color: rgba(50,20,10,.5);
-  border-radius: 80%;
+    background: white;
+    color: rgba(50, 20, 10, .5);
+    border-radius: 80%;
 }
 
 .Portfolio-Link {
-  margin: 0 5px;
-  color: darkred;
-  padding: 10px;
+    margin: 0 5px;
+    color: darkred;
+    padding: 10px;
 }
 
 .Portfolio-Link:hover {
-  background: white;
+    background: white;
 }
-
 
 
 /**********
@@ -142,32 +150,33 @@ Contact
 **********/
 
 .Contact {
-  background: maroon;
+    background: maroon;
 }
 
 .Contact a {
-  color: white;
-  padding: 10px;
+    color: white;
+    padding: 10px;
 }
 
 .Contact a:hover {
-  color: maroon;
+    color: maroon;
 }
 
 .Contact ul {
-  margin: 5px;
-  padding: 5px;
+    margin: 5px;
+    padding: 5px;
 }
+
 .Contact li {
-  display: inline-block;
-  margin: 5px;
-  padding: 5px;
-  background: rgba(50, 20, 10, .5);
-  border-radius: 3%;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background: rgba(50, 20, 10, .5);
+    border-radius: 3%;
 }
 
 .Contact li:hover {
-  background: white;
+    background: white;
 }
 
 
@@ -176,24 +185,20 @@ Mobile
 **********/
 
 @media screen and (max-width: 680px) {
-  .profile {
-    display: none;
-  }
-
-  nav li {
-    padding: 10px;
-  }
-
-  .bio {
-    width: 100%;
-  }
-
-  .Portfolio-Control {
-    font-size: 2em;
-  }
-
-  .Portfolio-Control:hover {
-    background: none;
-    color: white;
-  }
+    .profile {
+        display: none;
+    }
+    nav li {
+        padding: 10px;
+    }
+    .bio {
+        width: 100%;
+    }
+    .Portfolio-Control {
+        font-size: 2em;
+    }
+    .Portfolio-Control:hover {
+        background: none;
+        color: white;
+    }
 }

@@ -5,6 +5,8 @@ import About from './About';
 import Contact from './Contact';
 import Portfolio from './Portfolio'
 
+zenscroll.setup(777, 175)
+
 class Layout extends Component {
     scrollToSpot(index) {
       var element = document.getElementsByClassName('Section-Container')[index]
