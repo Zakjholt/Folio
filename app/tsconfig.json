@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "strict": true,
+        "lib": ["dom", "es2015", "esnext"]
+    }
+}
