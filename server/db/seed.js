@@ -1,6 +1,5 @@
 const seedQuestions = [
   {
-    id: 1,
     question: "What is your favorite color?",
     answer: [
       "It used to be blue,",
@@ -9,7 +8,6 @@ const seedQuestions = [
     ]
   },
   {
-    id: 2,
     question: "What is this project built using?",
     answer: [
       "The backend for this app is a Nodejs api, paired with a Mongo db.",
@@ -19,7 +17,6 @@ const seedQuestions = [
     ]
   },
   {
-    id: 3,
     question: "What are you looking for in your next position?",
     answer: [
       "Professionally speaking, I'm looking for more opportunities to grow and be challenged.",

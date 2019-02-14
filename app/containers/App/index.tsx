@@ -3,18 +3,25 @@ import * as React from "react";
 import QuestionAsking from "../../components/QuestionAsking";
 import Door from "../../components/Door";
 
-import { useFolioReducer } from "../../hooks/reducer";
+async function fetchAndSetQuestions(setQuestions: Function) {
+  const response = await fetch("/questions");
+  const { questions } = await response.json();
+
+  setQuestions(questions);
+}
 
 const App: React.SFC<{}> = () => {
-  const [state, dispatch] = useFolioReducer();
+  const [showDoor, setShowDoor] = React.useState(true);
+  const [questions, setQuestions] = React.useState([] as Question[]);
+
+  React.useEffect(() => {
+    fetchAndSetQuestions(setQuestions);
+  }, []);
 
   return (
     <div>
-      {state.questions.length ? (
-        <QuestionAsking />
-      ) : (
-        <Door dropDoor={() => alert("time to drop it")} />
-      )}
+      {!showDoor && <QuestionAsking questions={questions} />}
+      <Door show={showDoor} dropDoor={() => setShowDoor(false)} />
     </div>
   );
 };

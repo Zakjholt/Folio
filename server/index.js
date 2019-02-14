@@ -10,7 +10,15 @@ getClient()
     const app = new Koa();
 
     // Routes
-    router.get("/");
+    router.get("/questions", async ctx => {
+      const questions = await ctx.db
+        .collection("questions")
+        .find({})
+        .toArray();
+
+      ctx.response.status = 200;
+      ctx.response.body = { questions };
+    });
 
     // Middlewares
     app.use(koaBody());

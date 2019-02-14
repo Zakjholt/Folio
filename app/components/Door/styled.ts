@@ -1,16 +1,21 @@
 import styled from "styled-components";
 
-import zakImg from "../../images/zak.png";
+import { Zak } from "../shared";
 
 export const Container = styled.div<{ canClick: boolean }>`
-  padding: 15px;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
+  background: white;
+  color: #222;
   font-family: "Bungee Inline";
   font-style: italic;
+  height: 100vh;
+  padding: 15px;
+  left: 0;
   line-height: 1;
-  color: #222;
+  position: fixed;
+  top: 0;
+  user-select: none;
+  width: 100vw;
+  z-index: 2;
 
   ${props => props.canClick && "cursor: pointer;"}
 `;
@@ -80,14 +85,9 @@ export const Handle = styled.div`
   box-shadow: 0 0 1px 1px rgba(200, 200, 200, 0.4);
 `;
 
-export const Zak = styled.div<{ show: boolean }>`
-  background-image: url(${zakImg});
-  width: 200px;
-  height: 300px;
+export const ZakDoor = styled(Zak)<{ show: boolean }>`
   right: -30px;
   top: -30px;
-  background-size: contain;
-  background-repeat: no-repeat;
   position: absolute;
   transition: transform 0.5s ease-in-out;
 
