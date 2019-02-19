@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "parcel build app/index.html -d public && node server/index.js",
     "dev": "concurrently --kill-others \"npm run dev:app\" \"npm run dev:server\"",
     "dev:app": "parcel watch app/index.html -d public",
     "dev:server": "nodemon --ignore public/ -r dotenv/config server/index.js dotenv_config_path=.env.local",

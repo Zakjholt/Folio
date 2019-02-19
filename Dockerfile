@@ -8,4 +8,6 @@ RUN npm install
 
 COPY src ./src
 
-CMD npm start
+ENTRYPOINT [ "npm", "run" ]
+
+CMD ["start"]

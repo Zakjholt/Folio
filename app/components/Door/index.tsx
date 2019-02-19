@@ -77,7 +77,8 @@ const Door: React.SFC<Props> = ({ dropDoor, show }) => {
             <TextBlurb
               texts={[
                 "oh hello",
-                "so nice of you to stop by and knock on my door"
+                "so nice of you to stop by and knock on my door",
+                "Why don't you come on in and have a seat, maybe a cup of herbal tea"
               ]}
               onClickAfterLastText={dropDoor}
             />
