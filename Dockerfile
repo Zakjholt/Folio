@@ -1,12 +1,15 @@
 FROM node
 
-WORKDIR /root
+USER node
+
+WORKDIR /home/node
 
 COPY package.json .
 COPY package-lock.json .
 RUN npm install 
 
-COPY src ./src
+COPY server ./server
+COPY app ./app
 
 ENTRYPOINT [ "npm", "run" ]
 
