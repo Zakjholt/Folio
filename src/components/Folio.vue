@@ -2,7 +2,7 @@
   <div class="container">
     <h4>Zak</h4>
 
-    <div>
+    <div class="blurb">
       <transition
         name="custom-classes-transition"
         mode="out-in"
@@ -12,12 +12,17 @@
         <strong :key="currentTech" :class="currentTech">{{currentTech}}</strong>
       </transition>
     </div>
+    <div class="contact">contact</div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .container {
   padding: 48px;
+}
+
+.blurb {
+  align-self: center;
 }
 
 h4 {
@@ -27,6 +32,34 @@ h4 {
 strong {
   font-size: 32px;
 }
+
+$tech-colors: (
+  react: #00d8ff,
+  vue: #42b883,
+  elm: #60b5cc,
+  graphql: #42b883,
+  go: #01add8,
+  elixir: #684877,
+  nodejs: #44883e
+);
+
+@each $tech, $color in $tech-colors {
+  strong.#{$tech} {
+    color: $color;
+  }
+}
+
+.contact {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  cursor: pointer;
+}
 </style>
 
 <script>
@@ -35,7 +68,7 @@ export default {
     const self = this;
     setInterval(() => {
       self.incrementTech();
-    }, 1000);
+    }, 2000);
   },
 
   data() {
